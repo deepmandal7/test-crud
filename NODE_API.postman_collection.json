@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "d0998029-dfa5-4ca7-95b9-936e3036270d",
+		"name": "NODE_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"movie_name\": \"Inception\",\n    \"rating\": 2,\n    \"movie_cast\": [\"Di Caprio\",\"Hardy\", \"Page\"],\n    \"genre\": \"science ficion\",\n    \"release_date\": \"10/23/2015\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Movies",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"Deep\",\n    \"last_name\": \"Mandal\",\n    \"password\": \"123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/movies?_id=63678911325e1e9448ef05bc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"movies"
+					],
+					"query": [
+						{
+							"key": "_id",
+							"value": "63678911325e1e9448ef05bc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Movie",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " \"_id\": \"63678911325e1e9448ef05bc\",\n        \"movie_name\": \"Inception\",\n        \"rating\": 2,\n        \"movie_cast\": [\n            \"Di Caprio\",\n            \"Hardy\",\n            \"Page\"\n        ],\n        \"genre\": \"science ficion\",\n        \"release_date\": \"2015-10-22T18:30:00.000Z\",",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Movie",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " \"_id\": \"63678911325e1e9448ef05bc\",\n        \"movie_name\": \"Inception\",\n        \"rating\": 2,\n        \"movie_cast\": [\n            \"Di Caprio\",\n            \"Hardy\",\n            \"Page\"\n        ],\n        \"genre\": \"science ficion\",\n        \"release_date\": \"2015-10-22T18:30:00.000Z\",",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/movies/:_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"movies",
+						":_id"
+					],
+					"variable": [
+						{
+							"key": "_id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
